@@ -3,7 +3,7 @@ import Content from "./Content";
 import Top from "./Top";
 import styled from "styled-components";
 
-function App() {
+export default function App() {
   return (
     <Container>
       <Top />
@@ -12,8 +12,6 @@ function App() {
     </Container>
   );
 }
-
-export default App;
 
 const Container = styled.div`
     width: 375px;
