@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default function Bottom (){
+export default function Bottom ({counter}){
     return (
-        <BottomBar>
+        <BottomBar data-test="footer">
             <Completed>
-                0/4 CONCLUÍDOS
+                {counter}/8 CONCLUÍDOS
             </Completed>
         </BottomBar>
     );

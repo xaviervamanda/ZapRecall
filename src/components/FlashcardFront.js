@@ -1,14 +1,14 @@
-import {BiRightArrow} from "react-icons/bi";
 import styled from "styled-components";
+import {BiRightArrow} from "react-icons/bi";
 
-export default function FlashcardFront (){
+export default function FlashCardFront ({index, showFlashcardBack}){
     return (
-        <Front>
+        <Front data-test="flashcard">
             <Name>
-                Pergunta 1
+                Pergunta {(index + 1)}
             </Name>
-            <IconFront onClick={() => alert("oi")}/>
-        </Front>
+            <IconFront data-test="play-btn" onClick={() => showFlashcardBack(index)}/>
+        </Front> 
     );
 }
 
@@ -19,7 +19,6 @@ const Front = styled.div`
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 25px;
-    /* mudar esse display para flex quando for pra aparecer */
     display: flex;
 `
 const Name = styled.div`

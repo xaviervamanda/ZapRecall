@@ -1,25 +1,34 @@
 import styled from "styled-components";
+import cards from "../cards";
 
-export default function Answer (){
-    return (
-        <Container>
-            <AnswerText>
-                JSX é uma sintaxe para escrever HTML dentro do JS
-            </AnswerText>
-            <Options>
-                <button>
-                    Não lembrei
-                </button>
-                <button>
-                    Quase não lembrei
-                </button>
-                <button>
-                    Zap!
-                </button>
-            </Options>
-        </Container>
-    );
+export default function Answer ({cards}){
+    console.log(cards)
+    {cards.map((card) => {
+        return (
+            <Container key={card}>
+                <AnswerText>
+                    {card.answer}
+                </AnswerText>
+                <Options>
+                    <button data-test="no-btn">
+                        Não lembrei
+                    </button>
+                    <button data-test="partial-btn">
+                        Quase não lembrei
+                    </button>
+                    <button data-test="zap-btn">
+                        Zap!
+                    </button>
+                </Options>
+            </Container>
+        );
+    })}
+    
 }
+
+// O x da pergunta: AiFillCloseCircle
+// O ? da pergunta: IoHelpCircle
+// O v da pergunta: IoCheckmarkCircleSharp
 
 const Container = styled.div`
     width: 300px;
@@ -29,7 +38,7 @@ const Container = styled.div`
     border-radius: 5px;
     margin-bottom: 25px;
     /* mudar esse display para flex quando for pra aparecer */
-    display: none;
+    display: flex;
     position: relative;
 `
 const AnswerText = styled.div`
