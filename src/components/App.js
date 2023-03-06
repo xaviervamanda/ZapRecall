@@ -34,11 +34,6 @@ export default function App() {
   function playZapRecall (){
     const status = "play";
     setStart(status);
-    return (
-      <Container>
-        
-      </Container>
-    );
   }
 
   return (

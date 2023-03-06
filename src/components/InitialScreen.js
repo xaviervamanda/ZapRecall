@@ -23,6 +23,7 @@ const Container = styled.div`
     position: relative;
     background-color: #FB6B6B;
     display: ${props => props.start === "play" ? "none" : "flex"};
+    z-index: 1;
 `
 const Logo = styled.div`
     position: absolute;
