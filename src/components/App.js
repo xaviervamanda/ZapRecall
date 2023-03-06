@@ -4,6 +4,7 @@ import Top from "./Top";
 import styled from "styled-components";
 import { useState } from "react";
 import cards from "../cards";
+import InitialScreen from "./InitialScreen";
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
   const [displayQuestionsText, setDisplayQuestionsText] = useState(Array(8).fill("none"));
   const [showAnswer, setShowAnswer] = useState(Array(8).fill(false));
   const [counter, setCounter] = useState(0);
+  const [start, setStart] = useState("");
 
   function showFlashcardBack (index){
     const newDisplayQuestions = [...displayQuestions];
@@ -27,21 +29,38 @@ export default function App() {
     setShowAnswer(newShowAnswer);
   }
 
+  function playZapRecall (){
+    const status = "play";
+    setStart(status);
+    return (
+      <Container>
+        
+      </Container>
+    );
+  }
+
   return (
     <Container>
-      <Top />
-      <Content 
-      showFlashcardBack={showFlashcardBack} 
-      showFlashcardAnswer={showFlashcardAnswer} 
-      cards={cards}
-      displayQuestions={displayQuestions}
-      displayQuestionsText={displayQuestionsText}
-      showAnswer={showAnswer}
-      counter={counter}
-      setCounter={setCounter}
-      setDisplayQuestions={setDisplayQuestions}
-      />
-      <Bottom counter={counter}/>
+      {start === "play" ? (
+        <>
+        <Top />
+        <Content 
+        showFlashcardBack={showFlashcardBack} 
+        showFlashcardAnswer={showFlashcardAnswer} 
+        cards={cards}
+        displayQuestions={displayQuestions}
+        displayQuestionsText={displayQuestionsText}
+        showAnswer={showAnswer}
+        counter={counter}
+        setCounter={setCounter}
+        setDisplayQuestions={setDisplayQuestions}
+        />
+        <Bottom counter={counter}/>
+        </>
+      ) : (
+        <InitialScreen playZapRecall={playZapRecall} start={start}/>
+      )}
+      
     </Container>
   );
 }

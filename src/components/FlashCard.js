@@ -28,7 +28,7 @@ export default function FlashCard ({cards,
             else {
                 if (!showAnswer[index]){
                     return (
-                        <Back key={index}>
+                        <Back key={index} data-test="flashcard">
                             <Question data-test="flashcard-text">
                                 {card.question}
                             </Question>
@@ -40,7 +40,7 @@ export default function FlashCard ({cards,
                     console.log(btn)
                     if (btn[index] === ""){
                     return (
-                        <Container key={index}>
+                        <Container key={index} data-test="flashcard">
                             <AnswerText data-test="flashcard-text">
                                 {card.answer}
                             </AnswerText>
