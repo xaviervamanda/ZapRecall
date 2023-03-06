@@ -48,7 +48,7 @@ export default function App() {
 
 
 const Container = styled.div`
-    width: 386px;
+    width: 390px;
     height: 695px;
     background-color: #FB6B6B;
     position: relative;
