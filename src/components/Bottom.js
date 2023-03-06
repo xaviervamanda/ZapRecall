@@ -11,7 +11,7 @@ export default function Bottom ({counter}){
 }
 
 const BottomBar = styled.div`
-    width: 385px;
+    width: 386px;
     height: 70px;
     background-color: #FFFFFF;
     position: fixed;

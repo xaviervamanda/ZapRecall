@@ -24,7 +24,7 @@ export default function Content ({displayQuestions, cards, showFlashcardBack, sh
 }
 
 const Deck = styled.div`
-    height: 335px;
+    height: 425px;
     width: 300px;
     position: absolute;
     top: 153px;
