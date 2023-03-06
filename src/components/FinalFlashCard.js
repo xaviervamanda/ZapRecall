@@ -9,7 +9,7 @@ export default function FinalFlashCard ({btn, index}){
             <Name data-test="flashcard-text">
                 Pergunta {(index + 1)}
             </Name>
-            {btn[index] === "not" ? <IconNot data-test="play-btn" /> : btn[index] === "zap" ? <IconZap data-test="play-btn" /> : <IconAlmost data-test="play-btn" />}
+            {btn[index] === "not" ? <IconNot data-test="no-icon" /> : btn[index] === "zap" ? <IconZap data-test="no-icon" /> : <IconAlmost data-test="no-icon" />}
         </Final>
     );
 }
