@@ -29,7 +29,7 @@ export default function FlashCard ({cards,
                 if (!showAnswer[index]){
                     return (
                         <Back key={index}>
-                            <Question>
+                            <Question data-test="flashcard-text">
                                 {card.question}
                             </Question>
                             <IconBack data-test="turn-btn" onClick={() => showFlashcardAnswer(index)}/>
@@ -41,7 +41,7 @@ export default function FlashCard ({cards,
                     if (btn[index] === ""){
                     return (
                         <Container key={index}>
-                            <AnswerText>
+                            <AnswerText data-test="flashcard-text">
                                 {card.answer}
                             </AnswerText>
                             <Options>

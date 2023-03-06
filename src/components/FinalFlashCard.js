@@ -6,7 +6,7 @@ import {IoCheckmarkCircleSharp} from "react-icons/io5"
 export default function FinalFlashCard ({btn, index}){
     return (
         <Final btn={btn} index={index}>
-            <Name>
+            <Name data-test="flashcard-text">
                 Pergunta {(index + 1)}
             </Name>
             {btn[index] === "not" ? <IconNot data-test="play-btn" /> : btn[index] === "zap" ? <IconZap data-test="play-btn" /> : <IconAlmost data-test="play-btn" />}

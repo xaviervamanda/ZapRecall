@@ -4,7 +4,7 @@ import {BiRightArrow} from "react-icons/bi";
 export default function FlashCardFront ({index, showFlashcardBack}){
     return (
         <Front data-test="flashcard">
-            <Name>
+            <Name data-test="flashcard-text">
                 Pergunta {(index + 1)}
             </Name>
             <IconFront data-test="play-btn" onClick={() => showFlashcardBack(index)}/>
