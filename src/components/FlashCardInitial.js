@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {BiRightArrow} from "react-icons/bi";
 
-export default function FlashCardFront ({index, showFlashcardBack}){
+export default function FlashCardInitial ({index, showFlashcardBack}){
     return (
         <Front data-test="flashcard">
             <Name data-test="flashcard-text">

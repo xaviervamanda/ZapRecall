@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {BsFillArrowRightCircleFill} from "react-icons/bs";
-import FlashCardFront from "./FlashCardFront";
+import FlashCardInitial from "./FlashCardInitial";
 import FinalFlashCard from "./FinalFlashCard";
 
 
@@ -22,7 +22,7 @@ export default function FlashCard ({cards,
             {cards.map((card, index) => {
             if (displayQuestions[index] === "flex"){
                 return (
-                    <FlashCardFront key={index} index={index} showFlashcardBack={showFlashcardBack} />
+                    <FlashCardInitial key={index} index={index} showFlashcardBack={showFlashcardBack} />
                 );   
             }
             else {
