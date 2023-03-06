@@ -7,7 +7,7 @@ import FinalFlashCard from "./FinalFlashCard";
 export default function FlashCard ({cards, 
     showFlashcardBack, displayQuestions, 
     showFlashcardAnswer, showAnswer,
-    btn, setBtn, setCounter, counter}){
+    btn, setBtn, setCounter, counter, clickOrder, setClickOrder}){
 
     function showFinalFlashCard (answer, index){
         const newBtn = [...btn];
@@ -15,6 +15,7 @@ export default function FlashCard ({cards,
         setBtn(newBtn);
         const turn = counter + 1;
         setCounter(turn);
+        setClickOrder([...clickOrder, index]);
     }
 
     return (

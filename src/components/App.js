@@ -13,6 +13,8 @@ export default function App() {
   const [showAnswer, setShowAnswer] = useState(Array(8).fill(false));
   const [counter, setCounter] = useState(0);
   const [start, setStart] = useState("");
+  const [btn, setBtn] = useState(Array(8).fill(""));
+  const [clickOrder, setClickOrder] = useState([]);
 
   function showFlashcardBack (index){
     const newDisplayQuestions = [...displayQuestions];
@@ -54,8 +56,13 @@ export default function App() {
         counter={counter}
         setCounter={setCounter}
         setDisplayQuestions={setDisplayQuestions}
+        btn={btn}
+        setBtn={setBtn}
+        clickOrder={clickOrder}
+        setClickOrder={setClickOrder}
         />
-        <Bottom counter={counter}/>
+        <Bottom counter={counter} btn={btn} 
+        clickOrder={clickOrder} />
         </>
       ) : (
         <InitialScreen playZapRecall={playZapRecall} start={start}/>

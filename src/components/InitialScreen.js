@@ -19,7 +19,7 @@ export default function InitialScreen ({playZapRecall, start}){
 
 const Container = styled.div`
     width: 390px;
-    height: 667px;
+    height: 695px;
     position: relative;
     background-color: #FB6B6B;
     display: ${props => props.start === "play" ? "none" : "flex"};

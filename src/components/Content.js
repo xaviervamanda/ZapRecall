@@ -2,9 +2,10 @@ import styled from "styled-components";
 import FlashCard from "./FlashCard";
 import { useState } from "react";
 
-export default function Content ({displayQuestions, cards, showFlashcardBack, showFlashcardAnswer, showAnswer, counter, setCounter}){
+export default function Content ({displayQuestions, cards, showFlashcardBack, 
+    showFlashcardAnswer, showAnswer, counter, 
+    setCounter, btn, setBtn, clickOrder, setClickOrder}){
 
-    const [btn, setBtn] = useState(Array(8).fill(""));
 
     return (
        <Deck>
@@ -18,6 +19,8 @@ export default function Content ({displayQuestions, cards, showFlashcardBack, sh
         setBtn={setBtn}
         counter={counter}
         setCounter={setCounter}
+        clickOrder={clickOrder}
+        setClickOrder={setClickOrder}
         />
        </Deck>
     );
